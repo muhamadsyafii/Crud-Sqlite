@@ -32,5 +32,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginRight="@dimen/toolbar_icon_margin"
         android:adjustViewBounds="true"
-        app:srcCompat="@drawable/ic_menu" />
+        app:srcCompat="@drawable/ic_account" />
 </RelativeLayout>

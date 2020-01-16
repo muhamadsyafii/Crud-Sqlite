@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Home.HomeActivity">
+
+    <include layout="@layout/custom_toolbar_home" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/iv_create"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/sqliteimage" />
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/padding_large_8dp"
+            android:layout_toRightOf="@id/iv_create"
+            android:text="@string/create_data"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_mCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:srcCompat="@drawable/ic_arrow_right"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:id="@+id/iv_read"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/sqliteimage" />
+
+        <TextView
+            android:id="@+id/tv_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/padding_large_8dp"
+            android:layout_marginLeft="@dimen/padding_large_8dp"
+            android:layout_toEndOf="@id/iv_read"
+            android:layout_toRightOf="@id/iv_read"
+            android:text="@string/read_data"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_mRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:srcCompat="@drawable/ic_arrow_right"
+            android:clickable="true"
+            android:focusable="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_update"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/sqliteimage" />
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/padding_large_8dp"
+            android:layout_toRightOf="@id/iv_update"
+            android:text="@string/update_data"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_mUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="24dp"
+            app:srcCompat="@drawable/ic_arrow_right"
+            android:clickable="true"
+            android:focusable="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/sqliteimage" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/padding_large_8dp"
+            android:layout_marginLeft="@dimen/padding_large_8dp"
+            android:layout_toEndOf="@id/iv_delete"
+            android:layout_toRightOf="@id/iv_delete"
+            android:text="@string/delete_data"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_mDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:srcCompat="@drawable/ic_arrow_right"
+            android:clickable="true"
+            android:focusable="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+</LinearLayout>

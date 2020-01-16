@@ -5,9 +5,9 @@
     <string name="create_data">Create Data</string>
     <string name="update_data">Update Data</string>
     <string name="delete_data">Delete Data</string>
+    <string name="read_data">Read Data</string>
+    <string name="id">Id</string>
     <string name="name">Name</string>
     <string name="classes">Class</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_id">Please enter your ID</string>
 </resources>

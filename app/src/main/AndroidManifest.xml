@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Home.MainActivity">
+        <activity android:name=".ui.Create.CreateActivity"></activity>
+        <activity android:name=".ui.Delete.DeleteActivity" />
+        <activity android:name=".ui.Read.ReadActivity" />
+        <activity android:name=".ui.Update.UpdateActivity" />
+        <activity android:name=".ui.Home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
