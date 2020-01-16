@@ -28,7 +28,7 @@ public class ReadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read);
-        CustomToolbar.setupToolbar(this);
+        CustomToolbar.setupToolbar(this, "Read Data");
         mRecycleView = findViewById(R.id.listData);
         mId = findViewById(R.id.tv_id);
 

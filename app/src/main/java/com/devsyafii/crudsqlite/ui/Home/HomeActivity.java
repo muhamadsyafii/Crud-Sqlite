@@ -11,11 +11,12 @@ import com.devsyafii.crudsqlite.ui.Create.CreateActivity;
 import com.devsyafii.crudsqlite.ui.Delete.DeleteActivity;
 import com.devsyafii.crudsqlite.ui.Read.ReadActivity;
 import com.devsyafii.crudsqlite.ui.Update.UpdateActivity;
+import com.devsyafii.crudsqlite.ui.account.AboutMeActivity;
 import com.devsyafii.crudsqlite.util.ActivityUtils;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageView mCreate, mRead, mUpdate, mDelete;
+    ImageView mCreate, mRead, mUpdate, mDelete, imAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         mRead = findViewById(R.id.iv_mRead);
         mUpdate = findViewById(R.id.iv_mUpdate);
         mDelete = findViewById(R.id.iv_mDelete);
+        imAccount = findViewById(R.id.iv_account);
 
         onClick();
     }
@@ -54,6 +56,12 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ActivityUtils.openActivity(HomeActivity.this, DeleteActivity.class);
+            }
+        });
+        imAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtils.openActivity(HomeActivity.this, AboutMeActivity.class);
             }
         });
     }

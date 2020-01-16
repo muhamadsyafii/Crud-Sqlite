@@ -27,7 +27,7 @@ public class UpdateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
-        CustomToolbar.setupToolbar(this);
+        CustomToolbar.setupToolbar(this, "Update Data");
         database = new DataHelper(this);
 
 //        Bundle bundle = getArguments();

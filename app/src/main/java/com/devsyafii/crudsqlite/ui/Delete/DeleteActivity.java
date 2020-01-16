@@ -24,7 +24,7 @@ public class DeleteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
-        CustomToolbar.setupToolbar(this);
+        CustomToolbar.setupToolbar(this, "Delete Data");
         database = new DataHelper(this);
         mId = findViewById(R.id.et_id);
         btnDelete = findViewById(R.id.btnDelete);

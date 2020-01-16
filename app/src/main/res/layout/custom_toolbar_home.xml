@@ -24,7 +24,7 @@
         android:layout_marginLeft="@dimen/padding_large_8dp"/>
 
     <ImageView
-        android:id="@+id/iv_menu"
+        android:id="@+id/iv_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
