@@ -10,6 +10,7 @@ import android.widget.EditText;
 import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.database.DataHelper;
 import com.devsyafii.crudsqlite.model.Student;
+import com.devsyafii.crudsqlite.util.ActivityUtils;
 import com.devsyafii.crudsqlite.util.CustomToolbar;
 
 import es.dmoral.toasty.Toasty;
@@ -46,6 +47,7 @@ public class CreateActivity extends AppCompatActivity {
                     mClass.setText("");
                     Toasty.success(CreateActivity.this, "Create Success", Toasty.LENGTH_SHORT).show();
                     dbhelper.createStudent(new Student(null, sName, sClass));
+                    ActivityUtils.hideKeyboard(CreateActivity.this);
                 }
             }
         });

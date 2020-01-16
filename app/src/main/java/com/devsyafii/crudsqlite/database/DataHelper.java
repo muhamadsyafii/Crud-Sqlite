@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataHelper extends SQLiteOpenHelper {
-
+    SQLiteDatabase database;
     private static final String DATABASE_NAME = "db_school";
     private static final String TABLE_STUDENT = "tbl_student";
     private static final int DATABASE_VERSION = 1;
@@ -55,19 +55,28 @@ public class DataHelper extends SQLiteOpenHelper {
         database.close();
     }
 
-    public int updateStudent(Student student) {
-        SQLiteDatabase database = this.getWritableDatabase();
+//    public int updateStudent(Student student) {
+//        SQLiteDatabase database = this.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//
+//        values.put(TABLE_NAME, student.getName());
+//        values.put(TABLE_NAME, student.getName());
+//
+//        return database.update(TABLE_STUDENT, values, TABLE_STD_ID + " = ?", new String[]{String.valueOf(student.getId())});
+//    }
+
+    public void updateStudent(long l, String name, String clasess) {
+        database = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-
-        values.put(TABLE_NAME, student.getName());
-        values.put(TABLE_NAME, student.getName());
-
-        return database.update(TABLE_STUDENT, values, TABLE_STD_ID + " = ?", new String[]{String.valueOf(student.getId())});
+        values.put(TABLE_NAME, name);
+        values.put(TABLE_CLASS, clasess);
+        database.update(TABLE_STUDENT, values, TABLE_STD_ID + "=" + l, null);
+        database.close();
     }
 
     public int deleteStudent(String id) {
         SQLiteDatabase database = this.getWritableDatabase();
-        return database.delete(TABLE_STUDENT, TABLE_STD_ID +" = ?", new String[]{id});
+        return database.delete(TABLE_STUDENT, TABLE_STD_ID + " = ?", new String[]{id});
     }
 
     public List<Student> readDataStudent() {
@@ -86,5 +95,34 @@ public class DataHelper extends SQLiteOpenHelper {
         }
         database.close();
         return list;
+    }
+
+    public Cursor getData(String id) {
+        SQLiteDatabase database = this.getWritableDatabase();
+        return database.rawQuery("SELECT * FROM " + TABLE_STUDENT + "WHERE " + id, null);
+    }
+
+    public String getName(long l1) {
+        database = this.getReadableDatabase();
+        String[] columns = new String[]{TABLE_STD_ID, TABLE_NAME, TABLE_CLASS};
+        Cursor cursor = database.query(TABLE_STUDENT, columns, TABLE_STD_ID + "=" + l1, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+            String name = cursor.getString(1);
+            return name;
+        }
+        return null;
+    }
+
+    public String getClass(long l2) {
+        database = this.getReadableDatabase();
+        String[] columns = new String[]{TABLE_STD_ID, TABLE_NAME, TABLE_CLASS};
+        Cursor cursor = database.query(TABLE_STUDENT, columns, TABLE_STD_ID + "=" + l2, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+            String classes = cursor.getString(2);
+            return classes;
+        }
+        return null;
     }
 }

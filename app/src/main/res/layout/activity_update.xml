@@ -1,46 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <include layout="@layout/custom_toolbar_back" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Hellow! on Update and Delete.." />
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <EditText
-            android:id="@+id/et_Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="@string/name" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Hellow! Update your data" />
 
-        <EditText
-            android:id="@+id/et_classes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/classes" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/update_data" />
+                <EditText
+                    android:id="@+id/et_showId"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/id" />
 
-<!--        <Button-->
-<!--            android:id="@+id/btnDelete"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/delete_data" />-->
-    </LinearLayout>
-</RelativeLayout>
+                <Button
+                    android:id="@+id/btnShow"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/et_showId"
+                    android:text="show" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name" />
+
+            <EditText
+                android:id="@+id/et_classes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/classes" />
+
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/update_data" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

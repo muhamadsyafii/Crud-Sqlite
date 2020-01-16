@@ -2,10 +2,12 @@ package com.devsyafii.crudsqlite.ui.Update;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.database.DataHelper;
@@ -19,8 +21,8 @@ public class UpdateActivity extends AppCompatActivity {
 
     private DataHelper database;
     private String id, name, classes;
-    private EditText mName, mClass;
-    private Button btnUpdate, btnDelete;
+    private EditText mId, mName, mClass;
+    private Button btnUpdate, btnShow;
 
 
     @Override
@@ -35,10 +37,11 @@ public class UpdateActivity extends AppCompatActivity {
 //        name = bundle.getString("NAME");
 //        classes = bundle.getString("CLASS");
 
+        mId = findViewById(R.id.et_showId);
         mName = findViewById(R.id.et_Name);
         mClass = findViewById(R.id.et_classes);
         btnUpdate = findViewById(R.id.btnUpdate);
-//        btnDelete = findViewById(R.id.btnDelete);
+        btnShow = findViewById(R.id.btnShow);
 
         mName.setText(name);
         mClass.setText(classes);
@@ -54,12 +57,38 @@ public class UpdateActivity extends AppCompatActivity {
                 }else if (classes.equals("")){
                     Toasty.error(UpdateActivity.this, "Please enter your Class", Toasty.LENGTH_SHORT).show();
                 }else {
-                    database.updateStudent(new Student(id, name, classes));
+                    long l = Long.parseLong(id);
+                    database.updateStudent(l,name,classes);
                     Toasty.success(UpdateActivity.this, "Data success update..", Toasty.LENGTH_SHORT).show();
+                    mId.setText("");
+                    mName.setText("");
+                    mClass.setText("");
                     ActivityUtils.hideKeyboard(UpdateActivity.this);
                 }
 
             }
         });
+        btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = mId.getText().toString();
+                if (id.equals("")){
+                    Toast.makeText(UpdateActivity.this, "Please enter your ID", Toast.LENGTH_SHORT).show();
+                    mId.requestFocus();
+                }else {
+                    try {
+                        long show = Long.parseLong(id);
+                        name = database.getName(show);
+                        classes = database.getClass(show);
+                        mName.setText(name);
+                        mClass.setText(classes);
+                    } catch (NumberFormatException e) {
+                        e.printStackTrace();
+                    }
+                }
+                ActivityUtils.hideKeyboard(UpdateActivity.this);
+            }
+        });
+
     }
 }

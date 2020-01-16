@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.database.DataHelper;
+import com.devsyafii.crudsqlite.ui.Home.HomeActivity;
 import com.devsyafii.crudsqlite.util.ActivityUtils;
 import com.devsyafii.crudsqlite.util.CustomToolbar;
 
@@ -43,6 +44,7 @@ public class DeleteActivity extends AppCompatActivity {
                     Toasty.success(DeleteActivity.this, "Data Delete", Toasty.LENGTH_SHORT).show();
                     mId.setText("");
                     ActivityUtils.hideKeyboard(DeleteActivity.this);
+                    ActivityUtils.closeActivity(DeleteActivity.this);
                 }else {
                     Toasty.error(DeleteActivity.this, "Data not Delete", Toasty.LENGTH_SHORT).show();
                 }
