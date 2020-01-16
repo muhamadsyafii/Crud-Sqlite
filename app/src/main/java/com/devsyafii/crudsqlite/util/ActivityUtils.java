@@ -1,10 +1,11 @@
-package com.devsyafii.crudsqlite.util;
 /*
- * Created by Muuhamad Syafii
- * Copyright (c) 2010.
+ * Created by Muhamad Syafii
+ * Copyright (c) 2020.
  * All Rights Reserved
  *
  */
+package com.devsyafii.crudsqlite.util;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;

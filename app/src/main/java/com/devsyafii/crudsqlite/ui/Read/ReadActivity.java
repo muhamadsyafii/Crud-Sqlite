@@ -1,3 +1,9 @@
+/*
+ * Created by Muhamad Syafii
+ * Copyright (c) 2020.
+ * All Rights Reserved
+ *
+ */
 package com.devsyafii.crudsqlite.ui.Read;
 
 import androidx.appcompat.app.AppCompatActivity;

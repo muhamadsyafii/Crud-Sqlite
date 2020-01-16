@@ -1,6 +1,10 @@
+/*
+ * Created by Muhamad Syafii
+ * Copyright (c) 2020.
+ * All Rights Reserved
+ *
+ */
 package com.devsyafii.crudsqlite.ui.Delete;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,9 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.database.DataHelper;
-import com.devsyafii.crudsqlite.ui.Home.HomeActivity;
 import com.devsyafii.crudsqlite.util.ActivityUtils;
 import com.devsyafii.crudsqlite.util.CustomToolbar;
 

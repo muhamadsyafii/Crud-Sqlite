@@ -1,3 +1,9 @@
+/*
+ * Created by Muhamad Syafii
+ * Copyright (c) 2020.
+ * All Rights Reserved
+ *
+ */
 package com.devsyafii.crudsqlite.ui.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +16,7 @@ import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.ui.Create.CreateActivity;
 import com.devsyafii.crudsqlite.ui.Delete.DeleteActivity;
 import com.devsyafii.crudsqlite.ui.Read.ReadActivity;
+
 import com.devsyafii.crudsqlite.ui.Update.UpdateActivity;
 import com.devsyafii.crudsqlite.ui.account.AboutMeActivity;
 import com.devsyafii.crudsqlite.util.ActivityUtils;
