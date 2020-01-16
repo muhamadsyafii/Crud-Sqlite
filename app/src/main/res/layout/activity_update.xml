@@ -44,7 +44,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/et_showId"
-                    android:text="show" />
+                    android:text="search"
+                    android:textAllCaps="false"/>
             </RelativeLayout>
 
             <EditText

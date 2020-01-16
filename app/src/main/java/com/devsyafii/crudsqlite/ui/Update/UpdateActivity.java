@@ -38,11 +38,6 @@ public class UpdateActivity extends AppCompatActivity {
         CustomToolbar.setupToolbar(this, "Update Data");
         database = new DataHelper(this);
 
-//        Bundle bundle = getArguments();
-//        id = bundle.getString("ID");
-//        name = bundle.getString("NAME");
-//        classes = bundle.getString("CLASS");
-
         mId = findViewById(R.id.et_showId);
         mName = findViewById(R.id.et_Name);
         mClass = findViewById(R.id.et_classes);
