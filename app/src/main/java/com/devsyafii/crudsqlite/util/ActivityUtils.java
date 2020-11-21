@@ -41,25 +41,4 @@ public class ActivityUtils {
         assert imm != null;
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
-
-    @SuppressLint("RestrictedApi")
-    public static void addFragmentToActivity (@NonNull FragmentManager fragmentManager,
-                                              @NonNull Fragment fragment, int frameId) {
-        checkNotNull(fragmentManager);
-        checkNotNull(fragment);
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(frameId, fragment);
-        transaction.commit();
-    }
-
-    @SuppressLint("RestrictedApi")
-    public static void replaceFragmentActivity (@NonNull FragmentManager fragmentManager,
-                                                @NonNull Fragment fragment, int frameId) {
-        checkNotNull(fragmentManager);
-        checkNotNull(fragment);
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.setTransition(FragmentTransaction.TRANSIT_NONE);
-        transaction.replace(frameId, fragment);
-        transaction.commit();
-    }
 }

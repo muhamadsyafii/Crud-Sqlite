@@ -4,7 +4,7 @@
  * All Rights Reserved
  *
  */
-package com.devsyafii.crudsqlite.ui.account;
+package com.devsyafii.crudsqlite.controller.account;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -27,7 +27,6 @@ public class DataHelper extends SQLiteOpenHelper {
     private static final String TABLE_STD_ID = "id";
     private static final String TABLE_NAME = "name";
     private static final String TABLE_CLASS = "class";
-
     private static final String queryCreateTable = "CREATE TABLE " + TABLE_STUDENT + "(" + TABLE_STD_ID + " INTEGER PRIMARY KEY," + TABLE_NAME + " TEXT," + TABLE_CLASS + " TEXT" + ")";
 
     public DataHelper(@Nullable Context context) {
@@ -52,7 +51,6 @@ public class DataHelper extends SQLiteOpenHelper {
     public void createStudent(Student student) {
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-
         values.put(TABLE_STD_ID, student.getId());
         values.put(TABLE_NAME, student.getName());
         values.put(TABLE_CLASS, student.getClasses());
@@ -60,16 +58,6 @@ public class DataHelper extends SQLiteOpenHelper {
         database.insert(TABLE_STUDENT, null, values);
         database.close();
     }
-
-//    public int updateStudent(Student student) {
-//        SQLiteDatabase database = this.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//
-//        values.put(TABLE_NAME, student.getName());
-//        values.put(TABLE_NAME, student.getName());
-//
-//        return database.update(TABLE_STUDENT, values, TABLE_STD_ID + " = ?", new String[]{String.valueOf(student.getId())});
-//    }
 
     public void updateStudent(long l, String name, String clasess) {
         database = this.getWritableDatabase();
@@ -101,11 +89,6 @@ public class DataHelper extends SQLiteOpenHelper {
         }
         database.close();
         return list;
-    }
-
-    public Cursor getData(String id) {
-        SQLiteDatabase database = this.getWritableDatabase();
-        return database.rawQuery("SELECT * FROM " + TABLE_STUDENT + "WHERE " + id, null);
     }
 
     public String getName(long l1) {

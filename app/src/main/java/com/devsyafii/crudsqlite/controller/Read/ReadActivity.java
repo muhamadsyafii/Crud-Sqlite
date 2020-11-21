@@ -4,7 +4,7 @@
  * All Rights Reserved
  *
  */
-package com.devsyafii.crudsqlite.ui.Read;
+package com.devsyafii.crudsqlite.controller.Read;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -44,6 +44,7 @@ public class ReadActivity extends AppCompatActivity {
         mRecycleView.setLayoutManager(manager);
         mRecycleView.setAdapter(studentAdapter);
         studentList.clear();
+
         List<Student> list = dbhelper.readDataStudent();
         for (Student contact : list){
             Student model = new Student(null,null,null);
@@ -54,8 +55,6 @@ public class ReadActivity extends AppCompatActivity {
 
             if ((studentList.isEmpty())){
                 Toast.makeText(ReadActivity.this, "Tidak ada data!!", Toast.LENGTH_SHORT).show();
-            }else {
-
             }
         }
     }

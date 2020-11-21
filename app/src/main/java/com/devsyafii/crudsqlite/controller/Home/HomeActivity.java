@@ -4,7 +4,7 @@
  * All Rights Reserved
  *
  */
-package com.devsyafii.crudsqlite.ui.Home;
+package com.devsyafii.crudsqlite.controller.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,12 +13,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.devsyafii.crudsqlite.R;
-import com.devsyafii.crudsqlite.ui.Create.CreateActivity;
-import com.devsyafii.crudsqlite.ui.Delete.DeleteActivity;
-import com.devsyafii.crudsqlite.ui.Read.ReadActivity;
+import com.devsyafii.crudsqlite.controller.Create.CreateActivity;
+import com.devsyafii.crudsqlite.controller.Delete.DeleteActivity;
+import com.devsyafii.crudsqlite.controller.Read.ReadActivity;
 
-import com.devsyafii.crudsqlite.ui.Update.UpdateActivity;
-import com.devsyafii.crudsqlite.ui.account.AboutMeActivity;
+import com.devsyafii.crudsqlite.controller.Update.UpdateActivity;
+import com.devsyafii.crudsqlite.controller.account.AboutMeActivity;
 import com.devsyafii.crudsqlite.util.ActivityUtils;
 
 public class HomeActivity extends AppCompatActivity {

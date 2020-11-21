@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.Delete.DeleteActivity">
+    tools:context=".controller.Delete.DeleteActivity">
 
     <include layout="@layout/custom_toolbar_back" />
 

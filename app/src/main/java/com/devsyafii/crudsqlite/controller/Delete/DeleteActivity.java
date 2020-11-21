@@ -4,7 +4,7 @@
  * All Rights Reserved
  *
  */
-package com.devsyafii.crudsqlite.ui.Delete;
+package com.devsyafii.crudsqlite.controller.Delete;
 
 import android.os.Bundle;
 import android.text.TextUtils;

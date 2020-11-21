@@ -4,7 +4,7 @@
  * All Rights Reserved
  *
  */
-package com.devsyafii.crudsqlite.ui.Read;
+package com.devsyafii.crudsqlite.controller.Read;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,20 +23,7 @@ import java.util.List;
 
 public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder> {
     private List<Student> itemListStudent;
-    private onItemClickCallback onItemClickCallback;
     Context context;
-
-    public interface onItemClickCallback {
-        void onItemClicked(Student data);
-    }
-
-    public void setOnItemClickCallback(onItemClickCallback onItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback;
-    }
-
-    public StudentAdapter(Context context) {
-        this.context = context;
-    }
 
     public StudentAdapter(Context context, List<Student> itemListStudent) {
         this.context = context;
@@ -59,13 +45,6 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
         holder.name.setText(student.getName());
         holder.classes.setText(student.getClasses());
         holder.ivProfile.setImageResource(R.drawable.sqliteimage);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "Get Position : " + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
-//                onItemClickCallback.onItemClicked(itemListStudent.get(holder.getAdapterPosition()));
-            }
-        });
     }
 
     @Override

@@ -4,11 +4,10 @@
  * All Rights Reserved
  *
  */
-package com.devsyafii.crudsqlite.ui.Update;
+package com.devsyafii.crudsqlite.controller.Update;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +16,6 @@ import android.widget.Toast;
 
 import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.database.DataHelper;
-import com.devsyafii.crudsqlite.model.Student;
 import com.devsyafii.crudsqlite.util.ActivityUtils;
 import com.devsyafii.crudsqlite.util.CustomToolbar;
 

@@ -10,12 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.account.AboutMeActivity"></activity>
-        <activity android:name=".ui.Create.CreateActivity" />
-        <activity android:name=".ui.Delete.DeleteActivity" />
-        <activity android:name=".ui.Read.ReadActivity" />
-        <activity android:name=".ui.Update.UpdateActivity" />
-        <activity android:name=".ui.Home.HomeActivity">
+        <activity android:name=".controller.account.AboutMeActivity"></activity>
+        <activity android:name=".controller.Create.CreateActivity" />
+        <activity android:name=".controller.Delete.DeleteActivity" />
+        <activity android:name=".controller.Read.ReadActivity" />
+        <activity android:name=".controller.Update.UpdateActivity" />
+        <activity android:name=".controller.Home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
