@@ -47,7 +47,7 @@ public class ReadActivity extends AppCompatActivity {
 
         List<Student> list = dbhelper.readDataStudent();
         for (Student contact : list){
-            Student model = new Student(null,null,null);
+            Student model = new Student();
             model.setId(contact.getId());
             model.setName(contact.getName());
             model.setClasses(contact.getClasses());

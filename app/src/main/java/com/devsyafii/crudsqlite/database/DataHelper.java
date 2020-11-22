@@ -80,7 +80,7 @@ public class DataHelper extends SQLiteOpenHelper {
         Cursor cursor = database.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
             do {
-                Student student = new Student(null, null, null);
+                Student student = new Student();
                 student.setId(cursor.getString(0));
                 student.setName(cursor.getString(1));
                 student.setClasses(cursor.getString(2));
