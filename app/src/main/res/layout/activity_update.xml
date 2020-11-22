@@ -10,7 +10,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/custom_toolbar_back" />
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/mToolbarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/toolbar_icon_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:id="@+id/mToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Update Data"
+            android:textColor="@color/white" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"

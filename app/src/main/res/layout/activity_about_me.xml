@@ -12,7 +12,34 @@
     android:orientation="vertical"
     tools:context=".controller.account.AboutMeActivity">
 
-    <include layout="@layout/custom_toolbar_back" />
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/mToolbarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/toolbar_icon_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:id="@+id/mToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="About"
+            android:textColor="@color/white" />
+    </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_profile"
@@ -27,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/myname"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -36,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/email_me"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@android:color/black"
         android:textSize="17sp" />
 

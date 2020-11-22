@@ -6,20 +6,19 @@
  */
 package com.devsyafii.crudsqlite.controller.Home;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.devsyafii.crudsqlite.R;
 import com.devsyafii.crudsqlite.controller.Create.CreateActivity;
 import com.devsyafii.crudsqlite.controller.Delete.DeleteActivity;
 import com.devsyafii.crudsqlite.controller.Read.ReadActivity;
-
 import com.devsyafii.crudsqlite.controller.Update.UpdateActivity;
 import com.devsyafii.crudsqlite.controller.account.AboutMeActivity;
-import com.devsyafii.crudsqlite.util.ActivityUtils;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -42,33 +41,38 @@ public class HomeActivity extends AppCompatActivity {
         mCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.openActivity(HomeActivity.this, CreateActivity.class);
+                Intent intent = new Intent(HomeActivity.this, CreateActivity.class);
+                startActivity(intent);
             }
         });
         mRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.openActivity(HomeActivity.this, ReadActivity.class);
+                Intent intent = new Intent(HomeActivity.this, ReadActivity.class);
+                startActivity(intent);
 
             }
         });
         mUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.openActivity(HomeActivity.this, UpdateActivity.class);
+                Intent intent = new Intent(HomeActivity.this, UpdateActivity.class);
+                startActivity(intent);
 
             }
         });
         mDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.openActivity(HomeActivity.this, DeleteActivity.class);
+                Intent intent = new Intent(HomeActivity.this, DeleteActivity.class);
+                startActivity(intent);
             }
         });
         imAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.openActivity(HomeActivity.this, AboutMeActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AboutMeActivity.class);
+                startActivity(intent);
             }
         });
     }
